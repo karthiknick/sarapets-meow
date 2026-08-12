@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Karthik",
+  title: "Sara Pet.Meow | Professional Pet Grooming",
   description: "Professional pet grooming services for happy, healthy and well-groomed pets.",
 };
 
