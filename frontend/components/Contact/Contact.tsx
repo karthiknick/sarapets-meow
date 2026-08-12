@@ -60,7 +60,7 @@ ${message}
                   Phone / WhatsApp
                 </p>
                 <p className="text-gray-600">
-                  +91 91482 19125
+                  +91 6361263658
                 </p>
               </div>
 
