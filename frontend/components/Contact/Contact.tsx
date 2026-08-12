@@ -8,15 +8,22 @@ export default function Contact() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  const isFormValid =
+    name.trim() !== "" &&
+    phone.trim() !== "" &&
+    message.trim() !== "";
+
   const handleSubmit = () => {
-    const whatsappNumber = "916361263658"; // Replace with your WhatsApp number
+    if (!isFormValid) return;
+
+    const whatsappNumber = "919148219125";
 
     const text = `
 🐾 New Grooming Enquiry
 
 👤 Name: ${name}
 
-📧 Email: ${email}
+📧 Email: ${email || "Not provided"}
 
 📱 Phone: ${phone}
 
@@ -59,6 +66,7 @@ ${message}
                 <p className="font-semibold text-[#0A1733]">
                   Phone / WhatsApp
                 </p>
+
                 <p className="text-gray-600">
                   +91 6361263658
                 </p>
@@ -68,6 +76,7 @@ ${message}
                 <p className="font-semibold text-[#0A1733]">
                   Email
                 </p>
+
                 <p className="text-gray-600">
                   contact@sarapetmeow.com
                 </p>
@@ -86,8 +95,10 @@ ${message}
                 <p className="font-semibold text-[#0A1733]">
                   Address
                 </p>
+
                 <p className="text-gray-600">
                   Hongasandra, Begur Main Road,
+                  <br />
                   Bangalore - 560068
                 </p>
               </div>
@@ -96,6 +107,7 @@ ${message}
                 <p className="font-semibold text-[#0A1733]">
                   Working Hours
                 </p>
+
                 <p className="text-gray-600">
                   Mon - Sun : 9:00 AM - 8:00 PM
                 </p>
@@ -105,7 +117,13 @@ ${message}
           </div>
 
           {/* Contact Form */}
-          <form className="rounded-2xl bg-white p-8 shadow-sm">
+          <form
+            className="rounded-2xl bg-white p-8 shadow-sm"
+            onSubmit={(e) => {
+              e.preventDefault();
+              handleSubmit();
+            }}
+          >
             <div className="space-y-5">
 
               <input
@@ -113,12 +131,13 @@ ${message}
                 placeholder="Your Name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
+                required
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-green-500"
               />
 
               <input
                 type="email"
-                placeholder="Email Address"
+                placeholder="Email Address (Optional)"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-green-500"
@@ -129,6 +148,7 @@ ${message}
                 placeholder="Phone Number"
                 value={phone}
                 onChange={(e) => setPhone(e.target.value)}
+                required
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-green-500"
               />
 
@@ -137,13 +157,18 @@ ${message}
                 placeholder="Tell us about your pet..."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
+                required
                 className="w-full rounded-xl border border-gray-200 px-4 py-3 outline-none focus:border-green-500"
               />
 
               <button
-                type="button"
-                onClick={handleSubmit}
-                className="w-full rounded-xl bg-green-600 py-3 font-semibold text-white transition hover:bg-green-700"
+                type="submit"
+                disabled={!isFormValid}
+                className={`w-full rounded-xl py-3 font-semibold text-white transition ${
+                  isFormValid
+                    ? "bg-green-600 hover:bg-green-700 cursor-pointer"
+                    : "bg-gray-300 cursor-not-allowed"
+                }`}
               >
                 Send via WhatsApp
               </button>
