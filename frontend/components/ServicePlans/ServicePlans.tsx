@@ -91,7 +91,7 @@ const plans = [
 
 export default function ServicePlans() {
   const whatsappNumber = "916361263658"; // Replace with your WhatsApp number
-
+  
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
       <div className="text-center mb-16">
@@ -105,7 +105,22 @@ export default function ServicePlans() {
       </div>
 
       <div className="grid md:grid-cols-2 gap-8">
-        {plans.map((plan) => (
+        {plans.map((plan) => {
+      const whatsappMessage = `Hi Sara Pet.Meow,
+                
+I would like to book the following grooming package:
+                
+🐶 Package: ${plan.name}
+💰 Price: ₹${plan.price}
+                
+✅ Included Services:
+${plan.included.map(item => `• ${item}`).join("\n")}
+                
+Please contact me to confirm the appointment and available slots.
+                
+Thank you.`;
+
+      return(
           <div
             key={plan.name}
             className={`${plan.color} rounded-3xl shadow-lg overflow-hidden relative`}
@@ -145,20 +160,6 @@ export default function ServicePlans() {
                     ₹{plan.price}
                   </p>
                 </div>
-
-                const whatsappMessage = `Hi Sara Pet.Meow,
-                
-                I would like to book the following grooming package:
-                
-                🐶 Package: ${plan.name}
-                💰 Price: ₹${plan.price}
-                
-                ✅ Included Services:
-                ${plan.included.map(item => `• ${item}`).join("\n")}
-                
-                Please contact me to confirm the appointment and available slots.
-                
-                Thank you.`;
                 
                 <a
                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
@@ -171,7 +172,8 @@ export default function ServicePlans() {
               </div>
             </div>
           </div>
-        ))}
+  );
+})}}
       </div>
     </section>
   );
