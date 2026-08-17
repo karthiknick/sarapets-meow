@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const services = [
   {
     title: "Bath & Shampoo",
@@ -153,12 +155,14 @@ export default function Services() {
       </div>
 
       {/* View All Services */}
-      <div className="mt-10 flex justify-center">
-        <button className="flex items-center gap-3 rounded-xl bg-green-600 px-8 py-4 font-semibold text-white shadow-lg transition-all duration-300 hover:scale-105 hover:bg-green-700">
-          View all services
-          <span className="text-lg">›</span>
-        </button>
-      </div>
+        <div className="text-center mt-10">
+            <Link
+                href="/services"
+                className="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition"
+            >
+                View All Services
+            </Link>
+            </div>
     </section>
   );
 }
