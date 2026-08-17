@@ -4,9 +4,9 @@ const gallery = [
   "/gallery/dog1.jpg",
   "/gallery/dog2.jpg",
   "/gallery/dog3.jpg",
-  "/gallery/dog4.jpg",
-  "/gallery/dog5.jpg",
-  "/gallery/dog6.jpg",
+  "/gallery/dog4.png",
+  "/gallery/dog5.png",
+  "/gallery/dog6.png",
 ];
 
 export default function Gallery() {
