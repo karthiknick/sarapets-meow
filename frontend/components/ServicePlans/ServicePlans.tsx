@@ -146,19 +146,19 @@ export default function ServicePlans() {
                   </p>
                 </div>
 
-const whatsappMessage = `Hi Sara Pet.Meow,
-
-I would like to book the following grooming package:
-
-🐶 Package: ${plan.name}
-💰 Price: ₹${plan.price}
-
-✅ Included Services:
-${plan.included.map(item => `• ${item}`).join("\n")}
-
-Please contact me to confirm the appointment and available slots.
-
-Thank you.`;
+                const whatsappMessage = `Hi Sara Pet.Meow,
+                
+                I would like to book the following grooming package:
+                
+                🐶 Package: ${plan.name}
+                💰 Price: ₹${plan.price}
+                
+                ✅ Included Services:
+                ${plan.included.map(item => `• ${item}`).join("\n")}
+                
+                Please contact me to confirm the appointment and available slots.
+                
+                Thank you.`;
                 
                 <a
                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
