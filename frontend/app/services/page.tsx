@@ -9,11 +9,6 @@ export default function ServicesPage() {
 
       <main className="pt-32 pb-20">
         <div className="max-w-7xl mx-auto px-6">
-
-          <p className="text-center text-gray-600 mb-12">
-            Choose the perfect grooming package for your furry friend.
-          </p>
-
           <ServicePlans />
         </div>
       </main>
