@@ -147,7 +147,21 @@ export default function ServicePlans() {
                 </div>
 
                 <a
-                  href={`https://wa.me/${whatsappNumber}?text=Hi Sara Pet.Meow, I would like to book the ${plan.name} package.`}
+                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+                    `Hi Sara Pet.Meow,
+                
+                I would like to book the following grooming package:
+                
+                🐾 Package: ${plan.name}
+                💰 Price: ₹${plan.price}
+                
+                ✅ Included Services:
+                ${plan.included.map((item) => `• ${item}`).join("\n")}
+                
+                Please contact me to confirm the appointment and available slots.
+                
+                Thank you.`
+                  )}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-green-600 hover:bg-green-700 text-white text-center font-semibold py-4 rounded-xl mt-8 transition"
