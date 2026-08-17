@@ -161,7 +161,6 @@ ${plan.included.map(item => `• ${item}`).join("\n")}
 Please contact me to confirm the appointment and available slots.
 
 Thank you.`
-)}`}
                   )}`}
                   target="_blank"
                   rel="noopener noreferrer"
