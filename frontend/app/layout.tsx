@@ -12,9 +12,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Sara Pet.Meow | Professional Pet Grooming",
-  description: "Professional pet grooming services for happy, healthy and well-groomed pets.",
+export const metadata = {
+  title: "Sara Pet.Meow",
+  description: "Professional Pet Grooming",
+};
+
+export const viewport = {
+  width: "device-width",
+  initialScale: 1,
 };
 
 // export default function RootLayout({
