@@ -16,31 +16,31 @@ export default function Navbar() {
 
         {/* NAVIGATION */}
         <div className="hidden items-center gap-8 md:flex">
-          <a href="#" className="text-sm text-slate-800 hover:text-green-600">
+          <a href="/" className="text-sm text-slate-800 hover:text-green-600">
             Home
           </a>
-
-          <a href="#services" className="text-sm text-slate-800 hover:text-green-600">
+          
+          <a href="/services" className="text-sm text-slate-800 hover:text-green-600">
             Services
           </a>
-
-          <a href="#why-choose-us" className="text-sm text-slate-800 hover:text-green-600">
+          
+          <a href="/#why-choose-us" className="text-sm text-slate-800 hover:text-green-600">
             Why Choose Us?
           </a>
-
-          <a href="#gallery" className="text-sm text-slate-800 hover:text-green-600">
+          
+          <a href="/#gallery" className="text-sm text-slate-800 hover:text-green-600">
             Gallery
           </a>
-
-          <a href="#testimonials" className="text-sm text-slate-800 hover:text-green-600">
+          
+          <a href="/#testimonials" className="text-sm text-slate-800 hover:text-green-600">
             Testimonials
           </a>
-
-          <a href="#team" className="text-sm text-slate-800 hover:text-green-600">
+          
+          <a href="/#team" className="text-sm text-slate-800 hover:text-green-600">
             Our Team
           </a>
-
-          <a href="#contact" className="text-sm text-slate-800 hover:text-green-600">
+          
+          <a href="/#contact" className="text-sm text-slate-800 hover:text-green-600">
             Contact Us
           </a>
 
