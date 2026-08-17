@@ -146,9 +146,7 @@ export default function ServicePlans() {
                   </p>
                 </div>
 
-                <a
-                  href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-`Hi Sara Pet.Meow,
+const whatsappMessage = `Hi Sara Pet.Meow,
 
 I would like to book the following grooming package:
 
@@ -160,8 +158,10 @@ ${plan.included.map(item => `• ${item}`).join("\n")}
 
 Please contact me to confirm the appointment and available slots.
 
-Thank you.`
-                  )}`}
+Thank you.`;
+                
+                <a
+                 href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full bg-green-600 hover:bg-green-700 text-white text-center font-semibold py-4 rounded-xl mt-8 transition"
