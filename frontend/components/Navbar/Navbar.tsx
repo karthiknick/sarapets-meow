@@ -46,13 +46,6 @@ export default function Navbar() {
 
         </div>
 
-        /* {/* LOGIN */}
-      <div className="w-64 flex justify-end">
-        <button className="rounded-lg bg-green-600 px-6 py-3 text-sm font-semibold text-white transition hover:bg-green-700">
-          Login
-        </button>
-      </div> */
-
     </div>
   </div>
 </nav>
