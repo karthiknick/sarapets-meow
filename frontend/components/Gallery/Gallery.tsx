@@ -1,9 +1,9 @@
 import Image from "next/image";
 
 const gallery = [
-  "/gallery/gallery1.jpg",
-  "/gallery/gallery2.jpg",
-  "/gallery/gallery3.jpg",
+  "/gallery/dog1.jpg",
+  "/gallery/dog2.jpg",
+  "/gallery/dog3.jpg",
   "/gallery/gallery4.jpg",
   "/gallery/gallery5.jpg",
   "/gallery/gallery6.jpg",
