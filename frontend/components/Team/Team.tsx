@@ -35,35 +35,35 @@ export default function Team() {
           </p>
         </div>
 
-        <div className="mt-16 grid gap-8 md:grid-cols-3">
-          {groomers.map((groomer) => (
-            <div
-              key={groomer.name}
-              className="overflow-hidden rounded-2xl bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
-            >
-              <Image
-                src={groomer.image}
-                alt={groomer.name}
-                width={500}
-                height={500}
-                className="h-64 w-full object-cover"
-              />
-
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-slate-900">
-                  {groomer.name}
-                </h3>
-
-                <p className="mt-2 text-green-600">
-                  {groomer.role}
-                </p>
-
-                <p className="mt-2 text-sm text-gray-500">
-                  {groomer.experience}
-                </p>
+        <div className="mt-16 flex flex-wrap justify-center gap-8">
+            {groomers.map((groomer) => (
+              <div
+                key={groomer.name}
+                className="w-full max-w-sm overflow-hidden rounded-2xl bg-white shadow-sm transition hover:-translate-y-2 hover:shadow-xl"
+              >
+                <Image
+                  src={groomer.image}
+                  alt={groomer.name}
+                  width={500}
+                  height={500}
+                  className="h-64 w-full object-cover"
+                />
+          
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-slate-900">
+                    {groomer.name}
+                  </h3>
+          
+                  <p className="mt-2 text-green-600">
+                    {groomer.role}
+                  </p>
+          
+                  <p className="mt-2 text-sm text-gray-500">
+                    {groomer.experience}
+                  </p>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
         </div>
       </div>
     </section>
