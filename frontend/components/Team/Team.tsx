@@ -27,7 +27,7 @@ export default function Team() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="text-center">
           <h2 className="text-4xl font-bold text-[#0A1733]">
-            Meet Our Groomers
+            Founder & Lead Groomer
           </h2>
 
           <p className="mt-4 text-gray-600">
