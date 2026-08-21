@@ -1,17 +1,21 @@
 export default function ServiceAreas() {
   const areas = [
+    "Kudlu gate",
     "HSR Layout",
-    "Koramangala",
-    "BTM Layout",
+    "Bommanahlli",
     "Electronic City",
     "Begur",
-    "Bommanahalli",
+    "Singasandra",
     "JP Nagar",
+    "Jayanagar",
+    "Harlur",
+    "Agra",
     "Bannerghatta Road",
-    "Bellandur",
-    "Sarjapur Road",
-    "Whitefield",
-    "Marathahalli",
+    "Madivala",
+    "Ejipura,
+    "Wilson Garden",
+    "Chandapura",
+    "BTM Layout",
   ];
 
   return (
