@@ -152,16 +152,35 @@ Thank you.`;
                   ))}
                 </div>
 
-                <div className="border-t border-gray-300 mt-10 pt-8">
-                  <div className="text-center">
-                    <p className="text-xl text-gray-700 mb-2">
-                      Starting From
-                    </p>
-
-                    <p className="text-5xl font-bold text-slate-900">
-                      ₹{plan.price}
-                    </p>
+                <div className="text-center">
+                  <p className="text-xl text-gray-700 mb-2">
+                    Starting From
+                  </p>
+                
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <span className="text-2xl text-gray-500 line-through">
+                      ₹{plan.originalPrice}
+                    </span>
+                
+                    <span className="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                      {Math.round(
+                        ((Number(plan.originalPrice) - Number(plan.price)) /
+                          Number(plan.originalPrice)) *
+                          100
+                      )}
+                      % OFF
+                    </span>
                   </div>
+                
+                  <p className="text-5xl font-bold text-slate-900">
+                    ₹{plan.price}
+                  </p>
+                
+                  <p className="text-green-700 font-medium mt-2">
+                    Save ₹
+                    {Number(plan.originalPrice) - Number(plan.price)}
+                  </p>
+                </div>
 
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
