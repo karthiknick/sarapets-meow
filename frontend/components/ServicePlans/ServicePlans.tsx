@@ -90,7 +90,7 @@ const plans = [
 ];
 
 export default function ServicePlans() {
-  const whatsappNumber = "916361263658";
+  const whatsappNumber = "919148219125";
 
   return (
     <section className="max-w-7xl mx-auto px-6 py-20">
