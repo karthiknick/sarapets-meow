@@ -4,6 +4,7 @@ const plans = [
   {
     name: "Essential Bath",
     price: "999",
+    originalPrice: "1499",
     color: "bg-rose-100",
     included: [
       "Bath",
@@ -26,6 +27,7 @@ const plans = [
   {
     name: "Bath & Basic Grooming",
     price: "1499",
+    originalPrice: "2199",
     color: "bg-cyan-100",
     popular: true,
     included: [
@@ -47,6 +49,7 @@ const plans = [
   {
     name: "Just Trim",
     price: "1599",
+    originalPrice: "2299",
     color: "bg-purple-100",
     included: [
       "Nail Clipping",
@@ -69,6 +72,7 @@ const plans = [
   {
     name: "Complete Makeover",
     price: "1999",
+    originalPrice: "2999",
     color: "bg-amber-100",
     included: [
       "Bath",
@@ -106,12 +110,18 @@ export default function ServicePlans() {
 
       <div className="grid md:grid-cols-2 gap-8">
         {plans.map((plan) => {
+          const discountPercentage = Math.round(
+            ((Number(plan.originalPrice) - Number(plan.price)) /
+              Number(plan.originalPrice)) *
+              100
+          );
+
           const whatsappMessage = `Hi Sara Pet.Meow,
 
 I would like to book the following grooming package:
 
 🐶 Package: ${plan.name}
-💰 Price: ₹${plan.price}
+💰 Offer Price: ₹${plan.price}
 
 ✅ Included Services:
 ${plan.included.map((item) => `• ${item}`).join("\n")}
@@ -152,35 +162,31 @@ Thank you.`;
                   ))}
                 </div>
 
-                <div className="text-center">
-                  <p className="text-xl text-gray-700 mb-2">
-                    Starting From
-                  </p>
-                
-                  <div className="flex items-center justify-center gap-3 mb-2">
-                    <span className="text-2xl text-gray-500 line-through">
-                      ₹{plan.originalPrice}
-                    </span>
-                
-                    <span className="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
-                      {Math.round(
-                        ((Number(plan.originalPrice) - Number(plan.price)) /
-                          Number(plan.originalPrice)) *
-                          100
-                      )}
-                      % OFF
-                    </span>
+                <div className="border-t border-gray-300 mt-10 pt-8">
+                  <div className="text-center">
+                    <p className="text-xl text-gray-700 mb-2">
+                      Starting From
+                    </p>
+
+                    <div className="flex items-center justify-center gap-3 mb-2">
+                      <span className="text-2xl text-gray-500 line-through">
+                        ₹{plan.originalPrice}
+                      </span>
+
+                      <span className="bg-red-500 text-white text-xs font-semibold px-2 py-1 rounded-full">
+                        {discountPercentage}% OFF
+                      </span>
+                    </div>
+
+                    <p className="text-5xl font-bold text-slate-900">
+                      ₹{plan.price}
+                    </p>
+
+                    <p className="text-green-700 font-medium mt-2">
+                      Save ₹
+                      {Number(plan.originalPrice) - Number(plan.price)}
+                    </p>
                   </div>
-                
-                  <p className="text-5xl font-bold text-slate-900">
-                    ₹{plan.price}
-                  </p>
-                
-                  <p className="text-green-700 font-medium mt-2">
-                    Save ₹
-                    {Number(plan.originalPrice) - Number(plan.price)}
-                  </p>
-                </div>
 
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
