@@ -12,7 +12,7 @@ export default function ServiceAreas() {
     "Agra",
     "Bannerghatta Road",
     "Madivala",
-    "Ejipura,
+    "Ejipura",
     "Wilson Garden",
     "Chandapura",
     "BTM Layout",
