@@ -10,7 +10,7 @@ export default function Navbar() {
                   href="#"
                   className="text-3xl font-bold tracking-tight text-slate-900"
                 >
-                  Sara <span className="text-green-600">Pet.Meow</span>
+                  Sara <span className="text-green-600">Pets.Meow</span>
                 </a>
               </div>
 
