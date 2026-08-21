@@ -68,7 +68,7 @@ ${message}
                 </p>
 
                 <p className="text-gray-600">
-                  +91 6361263658
+                  +91 9148219125
                 </p>
               </div>
 
